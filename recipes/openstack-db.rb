@@ -22,43 +22,7 @@ class ::Chef::Recipe
 end
 
 db_create_with_user(
-  "compute",
-  node["openstack"]["compute"]["db"]["username"],
-  db_password("nova")
-)
-
-db_create_with_user(
-  "dashboard",
-  node["openstack"]["dashboard"]["db"]["username"],
-  db_password("horizon")
-)
-
-db_create_with_user(
   "identity",
   node["openstack"]["identity"]["db"]["username"],
   db_password("keystone")
-)
-
-db_create_with_user(
-  "image",
-  node["openstack"]["image"]["db"]["username"],
-  db_password("glance")
-)
-
-db_create_with_user(
-  "metering",
-  node["openstack"]["metering"]["db"]["username"],
-  db_password("ceilometer")
-)
-
-db_create_with_user(
-  "network",
-  node["openstack"]["network"]["db"]["username"],
-  db_password("neutron")
-)
-
-db_create_with_user(
-  "volume",
-  node["openstack"]["block-storage"]["db"]["username"],
-  db_password("cinder")
 )
