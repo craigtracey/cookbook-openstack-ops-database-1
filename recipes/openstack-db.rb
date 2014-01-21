@@ -26,3 +26,10 @@ db_create_with_user(
   node["openstack"]["identity"]["db"]["username"],
   db_password("keystone")
 )
+
+db_create_with_user(
+  "image",
+  node["openstack"]["image"]["db"]["username"],
+  db_password("image")
+)
+
