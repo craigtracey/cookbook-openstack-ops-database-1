@@ -24,12 +24,12 @@ end
 db_create_with_user(
   "identity",
   node["openstack"]["identity"]["db"]["username"],
-  db_password("keystone")
+  get_password "db", "keystone"
 )
 
 db_create_with_user(
   "image",
   node["openstack"]["image"]["db"]["username"],
-  db_password("image")
+  get_password "db", "image"
 )
 
